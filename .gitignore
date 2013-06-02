@@ -13,3 +13,12 @@ sized/
 thumbs/
 _thumbs/
 */expressionengine/cache/*
+
+
+#binary files
+Controller/obj/
+Controller/bin/
+Model/obj/
+Model/bin/
+SkypeHistoryEditor/obj/
+SkypeHistoryEditor/bin/
