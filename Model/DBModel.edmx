@@ -1,0 +1,1688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBModel.Store" Alias="Self" Provider="Devart.Data.SQLite" ProviderManifestToken="SQLite" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="DBModel.Store.Accounts" store:Type="Tables" Schema="main" />
+          <EntitySet Name="CallMembers" EntityType="DBModel.Store.CallMembers" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Calls" EntityType="DBModel.Store.Calls" store:Type="Tables" Schema="main" />
+          <EntitySet Name="ChatMembers" EntityType="DBModel.Store.ChatMembers" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Chats" EntityType="DBModel.Store.Chats" store:Type="Tables" Schema="main" />
+          <EntitySet Name="ContactGroups" EntityType="DBModel.Store.ContactGroups" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Contacts" EntityType="DBModel.Store.Contacts" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Conversations" EntityType="DBModel.Store.Conversations" store:Type="Tables" Schema="main" />
+          <EntitySet Name="DbMeta" EntityType="DBModel.Store.DbMeta" store:Type="Tables" Schema="main" />
+          <EntitySet Name="LegacyMessages" EntityType="DBModel.Store.LegacyMessages" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Messages" EntityType="DBModel.Store.Messages" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Participants" EntityType="DBModel.Store.Participants" store:Type="Tables" Schema="main" />
+          <EntitySet Name="SMSes" EntityType="DBModel.Store.SMSes" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Transfers" EntityType="DBModel.Store.Transfers" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Videos" EntityType="DBModel.Store.Videos" store:Type="Tables" Schema="main" />
+          <EntitySet Name="Voicemails" EntityType="DBModel.Store.Voicemails" store:Type="Tables" Schema="main" />
+        </EntityContainer>
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="status" Type="integer" />
+          <Property Name="pwdchangestatus" Type="integer" />
+          <Property Name="logoutreason" Type="integer" />
+          <Property Name="commitstatus" Type="integer" />
+          <Property Name="suggested_skypename" Type="text" />
+          <Property Name="skypeout_balance_currency" Type="text" />
+          <Property Name="skypeout_balance" Type="integer" />
+          <Property Name="skypeout_precision" Type="integer" />
+          <Property Name="skypein_numbers" Type="text" />
+          <Property Name="subscriptions" Type="text" />
+          <Property Name="cblsyncstatus" Type="integer" />
+          <Property Name="offline_callforward" Type="text" />
+          <Property Name="chat_policy" Type="integer" />
+          <Property Name="skype_call_policy" Type="integer" />
+          <Property Name="pstn_call_policy" Type="integer" />
+          <Property Name="avatar_policy" Type="integer" />
+          <Property Name="buddycount_policy" Type="integer" />
+          <Property Name="timezone_policy" Type="integer" />
+          <Property Name="webpresence_policy" Type="integer" />
+          <Property Name="phonenumbers_policy" Type="integer" />
+          <Property Name="voicemail_policy" Type="integer" />
+          <Property Name="authrequest_policy" Type="integer" />
+          <Property Name="ad_policy" Type="integer" />
+          <Property Name="partner_optedout" Type="text" />
+          <Property Name="service_provider_info" Type="text" />
+          <Property Name="registration_timestamp" Type="integer" />
+          <Property Name="nr_of_other_instances" Type="integer" />
+          <Property Name="partner_channel_status" Type="text" />
+          <Property Name="flamingo_xmpp_status" Type="integer" />
+          <Property Name="owner_under_legal_age" Type="integer" />
+          <Property Name="type" Type="integer" />
+          <Property Name="skypename" Type="text" />
+          <Property Name="pstnnumber" Type="text" />
+          <Property Name="fullname" Type="text" />
+          <Property Name="birthday" Type="integer" />
+          <Property Name="gender" Type="integer" />
+          <Property Name="languages" Type="text" />
+          <Property Name="country" Type="text" />
+          <Property Name="province" Type="text" />
+          <Property Name="city" Type="text" />
+          <Property Name="phone_home" Type="text" />
+          <Property Name="phone_office" Type="text" />
+          <Property Name="phone_mobile" Type="text" />
+          <Property Name="emails" Type="text" />
+          <Property Name="homepage" Type="text" />
+          <Property Name="about" Type="text" />
+          <Property Name="profile_timestamp" Type="integer" />
+          <Property Name="received_authrequest" Type="text" />
+          <Property Name="displayname" Type="text" />
+          <Property Name="refreshing" Type="integer" />
+          <Property Name="given_authlevel" Type="integer" />
+          <Property Name="aliases" Type="text" />
+          <Property Name="authreq_timestamp" Type="integer" />
+          <Property Name="mood_text" Type="text" />
+          <Property Name="timezone" Type="integer" />
+          <Property Name="nrof_authed_buddies" Type="integer" />
+          <Property Name="ipcountry" Type="text" />
+          <Property Name="given_displayname" Type="text" />
+          <Property Name="availability" Type="integer" />
+          <Property Name="lastonline_timestamp" Type="integer" />
+          <Property Name="capabilities" Type="blob" />
+          <Property Name="avatar_image" Type="blob" />
+          <Property Name="assigned_speeddial" Type="text" />
+          <Property Name="lastused_timestamp" Type="integer" />
+          <Property Name="authrequest_count" Type="integer" />
+          <Property Name="assigned_comment" Type="text" />
+          <Property Name="alertstring" Type="text" />
+          <Property Name="avatar_timestamp" Type="integer" />
+          <Property Name="mood_timestamp" Type="integer" />
+          <Property Name="rich_mood_text" Type="text" />
+          <Property Name="synced_email" Type="blob" />
+          <Property Name="set_availability" Type="integer" />
+          <Property Name="options_change_future" Type="blob" />
+          <Property Name="cbl_profile_blob" Type="blob" />
+          <Property Name="authorized_time" Type="integer" />
+          <Property Name="sent_authrequest" Type="text" />
+          <Property Name="sent_authrequest_time" Type="integer" />
+          <Property Name="sent_authrequest_serial" Type="integer" />
+          <Property Name="buddyblob" Type="blob" />
+          <Property Name="cbl_future" Type="blob" />
+          <Property Name="node_capabilities" Type="integer" />
+          <Property Name="node_capabilities_and" Type="integer" />
+          <Property Name="revoked_auth" Type="integer" />
+          <Property Name="added_in_shared_group" Type="integer" />
+          <Property Name="in_shared_group" Type="integer" />
+          <Property Name="authreq_history" Type="blob" />
+          <Property Name="profile_attachments" Type="blob" />
+          <Property Name="stack_version" Type="integer" />
+          <Property Name="offline_authreq_id" Type="integer" />
+          <Property Name="verified_email" Type="blob" />
+          <Property Name="verified_company" Type="blob" />
+        </EntityType>
+        <EntityType Name="CallMembers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="identity" Type="text" />
+          <Property Name="dispname" Type="text" />
+          <Property Name="languages" Type="text" />
+          <Property Name="call_duration" Type="integer" />
+          <Property Name="price_per_minute" Type="integer" />
+          <Property Name="price_precision" Type="integer" />
+          <Property Name="price_currency" Type="text" />
+          <Property Name="payment_category" Type="text" />
+          <Property Name="type" Type="integer" />
+          <Property Name="status" Type="integer" />
+          <Property Name="failurereason" Type="integer" />
+          <Property Name="sounderror_code" Type="integer" />
+          <Property Name="soundlevel" Type="integer" />
+          <Property Name="pstn_statustext" Type="text" />
+          <Property Name="pstn_feedback" Type="text" />
+          <Property Name="forward_targets" Type="text" />
+          <Property Name="forwarded_by" Type="text" />
+          <Property Name="debuginfo" Type="text" />
+          <Property Name="videostatus" Type="integer" />
+          <Property Name="target_identity" Type="text" />
+          <Property Name="mike_status" Type="integer" />
+          <Property Name="is_read_only" Type="integer" />
+          <Property Name="quality_status" Type="integer" />
+          <Property Name="call_name" Type="text" />
+          <Property Name="transfer_status" Type="integer" />
+          <Property Name="transfer_active" Type="integer" />
+          <Property Name="transferred_by" Type="text" />
+          <Property Name="transferred_to" Type="text" />
+          <Property Name="guid" Type="text" />
+          <Property Name="next_redial_time" Type="integer" />
+          <Property Name="nrof_redials_done" Type="integer" />
+          <Property Name="nrof_redials_left" Type="integer" />
+          <Property Name="transfer_topic" Type="text" />
+          <Property Name="real_identity" Type="text" />
+          <Property Name="start_timestamp" Type="integer" />
+          <Property Name="is_conference" Type="integer" />
+          <Property Name="quality_problems" Type="text" />
+          <Property Name="identity_type" Type="integer" />
+          <Property Name="country" Type="text" />
+          <Property Name="creation_timestamp" Type="integer" />
+          <Property Name="stats_xml" Type="text" />
+          <Property Name="is_premium_video_sponsor" Type="integer" />
+          <Property Name="is_multiparty_video_capable" Type="integer" />
+          <Property Name="recovery_in_progress" Type="integer" />
+          <Property Name="nonse_word" Type="text" />
+          <Property Name="pk_status" Type="integer" />
+          <Property Name="call_db_id" Type="integer" />
+          <Property Name="prime_status" Type="integer" />
+        </EntityType>
+        <EntityType Name="Calls">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="begin_timestamp" Type="integer" />
+          <Property Name="topic" Type="text" />
+          <Property Name="is_muted" Type="integer" />
+          <Property Name="is_unseen_missed" Type="integer" />
+          <Property Name="host_identity" Type="text" />
+          <Property Name="mike_status" Type="integer" />
+          <Property Name="duration" Type="integer" />
+          <Property Name="soundlevel" Type="integer" />
+          <Property Name="access_token" Type="text" />
+          <Property Name="active_members" Type="integer" />
+          <Property Name="is_active" Type="integer" />
+          <Property Name="name" Type="text" />
+          <Property Name="video_disabled" Type="integer" />
+          <Property Name="joined_existing" Type="integer" />
+          <Property Name="server_identity" Type="text" />
+          <Property Name="vaa_input_status" Type="integer" />
+          <Property Name="is_incoming" Type="integer" />
+          <Property Name="is_conference" Type="integer" />
+          <Property Name="is_on_hold" Type="integer" />
+          <Property Name="start_timestamp" Type="integer" />
+          <Property Name="quality_problems" Type="text" />
+          <Property Name="current_video_audience" Type="text" />
+          <Property Name="premium_video_status" Type="integer" />
+          <Property Name="premium_video_is_grace_period" Type="integer" />
+          <Property Name="is_premium_video_sponsor" Type="integer" />
+          <Property Name="premium_video_sponsor_list" Type="text" />
+          <Property Name="old_members" Type="blob" />
+          <Property Name="partner_handle" Type="text" />
+          <Property Name="partner_dispname" Type="text" />
+          <Property Name="type" Type="integer" />
+          <Property Name="status" Type="integer" />
+          <Property Name="failurereason" Type="integer" />
+          <Property Name="failurecode" Type="integer" />
+          <Property Name="pstn_number" Type="text" />
+          <Property Name="old_duration" Type="integer" />
+          <Property Name="conf_participants" Type="blob" />
+          <Property Name="pstn_status" Type="text" />
+          <Property Name="members" Type="blob" />
+          <Property Name="conv_dbid" Type="integer" />
+        </EntityType>
+        <EntityType Name="ChatMembers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="chatname" Type="text" />
+          <Property Name="identity" Type="text" />
+          <Property Name="role" Type="integer" />
+          <Property Name="is_active" Type="integer" />
+          <Property Name="cur_activities" Type="integer" />
+          <Property Name="adder" Type="text" />
+        </EntityType>
+        <EntityType Name="Chats">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="name" Type="text" />
+          <Property Name="options" Type="integer" />
+          <Property Name="friendlyname" Type="text" />
+          <Property Name="description" Type="text" />
+          <Property Name="timestamp" Type="integer" />
+          <Property Name="activity_timestamp" Type="integer" />
+          <Property Name="dialog_partner" Type="text" />
+          <Property Name="adder" Type="text" />
+          <Property Name="type" Type="integer" />
+          <Property Name="mystatus" Type="integer" />
+          <Property Name="myrole" Type="integer" />
+          <Property Name="posters" Type="text" />
+          <Property Name="participants" Type="text" />
+          <Property Name="applicants" Type="text" />
+          <Property Name="banned_users" Type="text" />
+          <Property Name="name_text" Type="text" />
+          <Property Name="topic" Type="text" />
+          <Property Name="topic_xml" Type="text" />
+          <Property Name="guidelines" Type="text" />
+          <Property Name="picture" Type="blob" />
+          <Property Name="alertstring" Type="text" />
+          <Property Name="is_bookmarked" Type="integer" />
+          <Property Name="passwordhint" Type="text" />
+          <Property Name="unconsumed_suppressed_msg" Type="integer" />
+          <Property Name="unconsumed_normal_msg" Type="integer" />
+          <Property Name="unconsumed_elevated_msg" Type="integer" />
+          <Property Name="unconsumed_msg_voice" Type="integer" />
+          <Property Name="activemembers" Type="text" />
+          <Property Name="state_data" Type="blob" />
+          <Property Name="lifesigns" Type="integer" />
+          <Property Name="last_change" Type="integer" />
+          <Property Name="first_unread_message" Type="integer" />
+          <Property Name="pk_type" Type="integer" />
+          <Property Name="dbpath" Type="text" />
+          <Property Name="split_friendlyname" Type="text" />
+          <Property Name="conv_dbid" Type="integer" />
+        </EntityType>
+        <EntityType Name="ContactGroups">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="type" Type="integer" />
+          <Property Name="custom_group_id" Type="integer" />
+          <Property Name="given_displayname" Type="text" />
+          <Property Name="nrofcontacts" Type="integer" />
+          <Property Name="nrofcontacts_online" Type="integer" />
+          <Property Name="given_sortorder" Type="integer" />
+          <Property Name="type_old" Type="integer" />
+          <Property Name="proposer" Type="text" />
+          <Property Name="description" Type="text" />
+          <Property Name="associated_chat" Type="text" />
+          <Property Name="members" Type="text" />
+          <Property Name="cbl_id" Type="integer" />
+          <Property Name="cbl_blob" Type="blob" />
+          <Property Name="fixed" Type="integer" />
+          <Property Name="keep_sharedgroup_contacts" Type="integer" />
+          <Property Name="chats" Type="text" />
+          <Property Name="extprop_is_hidden" Type="integer" />
+          <Property Name="extprop_sortorder_value" Type="integer" />
+          <Property Name="extprop_is_expanded" Type="integer" />
+        </EntityType>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="type" Type="integer" />
+          <Property Name="skypename" Type="text" />
+          <Property Name="pstnnumber" Type="text" />
+          <Property Name="aliases" Type="text" />
+          <Property Name="fullname" Type="text" />
+          <Property Name="birthday" Type="integer" />
+          <Property Name="gender" Type="integer" />
+          <Property Name="languages" Type="text" />
+          <Property Name="country" Type="text" />
+          <Property Name="province" Type="text" />
+          <Property Name="city" Type="text" />
+          <Property Name="phone_home" Type="text" />
+          <Property Name="phone_office" Type="text" />
+          <Property Name="phone_mobile" Type="text" />
+          <Property Name="emails" Type="text" />
+          <Property Name="homepage" Type="text" />
+          <Property Name="about" Type="text" />
+          <Property Name="avatar_image" Type="blob" />
+          <Property Name="mood_text" Type="text" />
+          <Property Name="rich_mood_text" Type="text" />
+          <Property Name="timezone" Type="integer" />
+          <Property Name="capabilities" Type="blob" />
+          <Property Name="profile_timestamp" Type="integer" />
+          <Property Name="nrof_authed_buddies" Type="integer" />
+          <Property Name="ipcountry" Type="text" />
+          <Property Name="avatar_timestamp" Type="integer" />
+          <Property Name="mood_timestamp" Type="integer" />
+          <Property Name="received_authrequest" Type="text" />
+          <Property Name="authreq_timestamp" Type="integer" />
+          <Property Name="lastonline_timestamp" Type="integer" />
+          <Property Name="availability" Type="integer" />
+          <Property Name="displayname" Type="text" />
+          <Property Name="refreshing" Type="integer" />
+          <Property Name="given_authlevel" Type="integer" />
+          <Property Name="given_displayname" Type="text" />
+          <Property Name="assigned_speeddial" Type="text" />
+          <Property Name="assigned_comment" Type="text" />
+          <Property Name="alertstring" Type="text" />
+          <Property Name="lastused_timestamp" Type="integer" />
+          <Property Name="authrequest_count" Type="integer" />
+          <Property Name="assigned_phone1" Type="text" />
+          <Property Name="assigned_phone1_label" Type="text" />
+          <Property Name="assigned_phone2" Type="text" />
+          <Property Name="assigned_phone2_label" Type="text" />
+          <Property Name="assigned_phone3" Type="text" />
+          <Property Name="assigned_phone3_label" Type="text" />
+          <Property Name="buddystatus" Type="integer" />
+          <Property Name="isauthorized" Type="integer" />
+          <Property Name="popularity_ord" Type="integer" />
+          <Property Name="isblocked" Type="integer" />
+          <Property Name="authorization_certificate" Type="blob" />
+          <Property Name="certificate_send_count" Type="integer" />
+          <Property Name="account_modification_serial_nr" Type="integer" />
+          <Property Name="saved_directory_blob" Type="blob" />
+          <Property Name="nr_of_buddies" Type="integer" />
+          <Property Name="server_synced" Type="integer" />
+          <Property Name="contactlist_track" Type="integer" />
+          <Property Name="last_used_networktime" Type="integer" />
+          <Property Name="authorized_time" Type="integer" />
+          <Property Name="sent_authrequest" Type="text" />
+          <Property Name="sent_authrequest_time" Type="integer" />
+          <Property Name="sent_authrequest_serial" Type="integer" />
+          <Property Name="buddyblob" Type="blob" />
+          <Property Name="cbl_future" Type="blob" />
+          <Property Name="node_capabilities" Type="integer" />
+          <Property Name="revoked_auth" Type="integer" />
+          <Property Name="added_in_shared_group" Type="integer" />
+          <Property Name="in_shared_group" Type="integer" />
+          <Property Name="authreq_history" Type="blob" />
+          <Property Name="profile_attachments" Type="blob" />
+          <Property Name="stack_version" Type="integer" />
+          <Property Name="offline_authreq_id" Type="integer" />
+          <Property Name="node_capabilities_and" Type="integer" />
+          <Property Name="authreq_crc" Type="integer" />
+          <Property Name="authreq_src" Type="integer" />
+          <Property Name="pop_score" Type="integer" />
+          <Property Name="authreq_nodeinfo" Type="blob" />
+          <Property Name="main_phone" Type="text" />
+          <Property Name="unified_servants" Type="text" />
+          <Property Name="phone_home_normalized" Type="text" />
+          <Property Name="phone_office_normalized" Type="text" />
+          <Property Name="phone_mobile_normalized" Type="text" />
+          <Property Name="sent_authrequest_initmethod" Type="integer" />
+          <Property Name="authreq_initmethod" Type="integer" />
+          <Property Name="verified_email" Type="blob" />
+          <Property Name="verified_company" Type="blob" />
+          <Property Name="sent_authrequest_extrasbitmask" Type="integer" />
+          <Property Name="extprop_seen_birthday" Type="integer" />
+          <Property Name="extprop_sms_target" Type="integer" />
+          <Property Name="extprop_can_show_avatar" Type="integer" />
+          <Property Name="extprop_external_data" Type="text" />
+        </EntityType>
+        <EntityType Name="Conversations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="identity" Type="text" />
+          <Property Name="type" Type="integer" />
+          <Property Name="live_host" Type="text" />
+          <Property Name="live_start_timestamp" Type="integer" />
+          <Property Name="live_is_muted" Type="integer" />
+          <Property Name="alert_string" Type="text" />
+          <Property Name="is_bookmarked" Type="integer" />
+          <Property Name="given_displayname" Type="text" />
+          <Property Name="displayname" Type="text" />
+          <Property Name="local_livestatus" Type="integer" />
+          <Property Name="inbox_timestamp" Type="integer" />
+          <Property Name="inbox_message_id" Type="integer" />
+          <Property Name="unconsumed_suppressed_messages" Type="integer" />
+          <Property Name="unconsumed_normal_messages" Type="integer" />
+          <Property Name="unconsumed_elevated_messages" Type="integer" />
+          <Property Name="unconsumed_messages_voice" Type="integer" />
+          <Property Name="active_vm_id" Type="integer" />
+          <Property Name="context_horizon" Type="integer" />
+          <Property Name="consumption_horizon" Type="integer" />
+          <Property Name="last_activity_timestamp" Type="integer" />
+          <Property Name="active_invoice_message" Type="integer" />
+          <Property Name="spawned_from_convo_id" Type="integer" />
+          <Property Name="pinned_order" Type="integer" />
+          <Property Name="creator" Type="text" />
+          <Property Name="creation_timestamp" Type="integer" />
+          <Property Name="my_status" Type="integer" />
+          <Property Name="opt_joining_enabled" Type="integer" />
+          <Property Name="opt_access_token" Type="text" />
+          <Property Name="opt_entry_level_rank" Type="integer" />
+          <Property Name="opt_disclose_history" Type="integer" />
+          <Property Name="opt_history_limit_in_days" Type="integer" />
+          <Property Name="opt_admin_only_activities" Type="integer" />
+          <Property Name="passwordhint" Type="text" />
+          <Property Name="meta_name" Type="text" />
+          <Property Name="meta_topic" Type="text" />
+          <Property Name="meta_guidelines" Type="text" />
+          <Property Name="meta_picture" Type="blob" />
+          <Property Name="premium_video_status" Type="integer" />
+          <Property Name="premium_video_is_grace_period" Type="integer" />
+          <Property Name="guid" Type="text" />
+          <Property Name="dialog_partner" Type="text" />
+          <Property Name="meta_description" Type="text" />
+          <Property Name="premium_video_sponsor_list" Type="text" />
+          <Property Name="chat_dbid" Type="integer" />
+          <Property Name="history_horizon" Type="integer" />
+          <Property Name="extprop_profile_height" Type="integer" />
+          <Property Name="extprop_chat_width" Type="integer" />
+          <Property Name="extprop_chat_left_margin" Type="integer" />
+          <Property Name="extprop_chat_right_margin" Type="integer" />
+          <Property Name="extprop_entry_height" Type="integer" />
+          <Property Name="extprop_windowpos_x" Type="integer" />
+          <Property Name="extprop_windowpos_y" Type="integer" />
+          <Property Name="extprop_windowpos_w" Type="integer" />
+          <Property Name="extprop_windowpos_h" Type="integer" />
+          <Property Name="extprop_window_maximized" Type="integer" />
+          <Property Name="extprop_window_detached" Type="integer" />
+          <Property Name="extprop_pinned_order" Type="integer" />
+          <Property Name="extprop_new_in_inbox" Type="integer" />
+          <Property Name="extprop_tab_order" Type="integer" />
+          <Property Name="extprop_video_layout" Type="integer" />
+          <Property Name="extprop_video_chat_height" Type="integer" />
+          <Property Name="extprop_chat_avatar" Type="integer" />
+          <Property Name="extprop_consumption_timestamp" Type="integer" />
+          <Property Name="extprop_form_visible" Type="integer" />
+          <Property Name="extprop_recovery_mode" Type="integer" />
+        </EntityType>
+        <EntityType Name="DbMeta">
+          <Key>
+            <PropertyRef Name="key" />
+          </Key>
+          <Property Name="key" Type="text" Nullable="false" />
+          <Property Name="value" Type="text" />
+        </EntityType>
+        <EntityType Name="LegacyMessages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+        </EntityType>
+        <EntityType Name="Messages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="convo_id" Type="integer" />
+          <Property Name="chatname" Type="text" />
+          <Property Name="author" Type="text" />
+          <Property Name="from_dispname" Type="text" />
+          <Property Name="author_was_live" Type="integer" />
+          <Property Name="guid" Type="blob" />
+          <Property Name="dialog_partner" Type="text" />
+          <Property Name="timestamp" Type="integer" />
+          <Property Name="type" Type="integer" />
+          <Property Name="sending_status" Type="integer" />
+          <Property Name="consumption_status" Type="integer" />
+          <Property Name="edited_by" Type="text" />
+          <Property Name="edited_timestamp" Type="integer" />
+          <Property Name="param_key" Type="integer" />
+          <Property Name="param_value" Type="integer" />
+          <Property Name="body_xml" Type="text" />
+          <Property Name="identities" Type="text" />
+          <Property Name="reason" Type="text" />
+          <Property Name="leavereason" Type="integer" />
+          <Property Name="participant_count" Type="integer" />
+          <Property Name="error_code" Type="integer" />
+          <Property Name="chatmsg_type" Type="integer" />
+          <Property Name="chatmsg_status" Type="integer" />
+          <Property Name="body_is_rawxml" Type="integer" />
+          <Property Name="oldoptions" Type="integer" />
+          <Property Name="newoptions" Type="integer" />
+          <Property Name="newrole" Type="integer" />
+          <Property Name="pk_id" Type="integer" />
+          <Property Name="crc" Type="integer" />
+          <Property Name="remote_id" Type="integer" />
+          <Property Name="call_guid" Type="text" />
+          <Property Name="extprop_contact_review_date" Type="text" />
+          <Property Name="extprop_contact_received_stamp" Type="integer" />
+          <Property Name="extprop_contact_reviewed" Type="integer" />
+        </EntityType>
+        <EntityType Name="Participants">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="convo_id" Type="integer" />
+          <Property Name="identity" Type="text" />
+          <Property Name="rank" Type="integer" />
+          <Property Name="requested_rank" Type="integer" />
+          <Property Name="text_status" Type="integer" />
+          <Property Name="voice_status" Type="integer" />
+          <Property Name="video_status" Type="integer" />
+          <Property Name="live_identity" Type="text" />
+          <Property Name="live_price_for_me" Type="text" />
+          <Property Name="live_fwd_identities" Type="text" />
+          <Property Name="live_start_timestamp" Type="integer" />
+          <Property Name="sound_level" Type="integer" />
+          <Property Name="debuginfo" Type="text" />
+          <Property Name="next_redial_time" Type="integer" />
+          <Property Name="nrof_redials_left" Type="integer" />
+          <Property Name="last_voice_error" Type="text" />
+          <Property Name="quality_problems" Type="text" />
+          <Property Name="live_type" Type="integer" />
+          <Property Name="live_country" Type="text" />
+          <Property Name="transferred_by" Type="text" />
+          <Property Name="transferred_to" Type="text" />
+          <Property Name="adder" Type="text" />
+          <Property Name="last_leavereason" Type="integer" />
+          <Property Name="is_premium_video_sponsor" Type="integer" />
+          <Property Name="is_multiparty_video_capable" Type="integer" />
+          <Property Name="live_identity_to_use" Type="text" />
+          <Property Name="livesession_recovery_in_progress" Type="integer" />
+          <Property Name="extprop_default_identity" Type="integer" />
+        </EntityType>
+        <EntityType Name="SMSes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="type" Type="integer" />
+          <Property Name="status" Type="integer" />
+          <Property Name="failurereason" Type="integer" />
+          <Property Name="is_failed_unseen" Type="integer" />
+          <Property Name="timestamp" Type="integer" />
+          <Property Name="price" Type="integer" />
+          <Property Name="price_precision" Type="integer" />
+          <Property Name="price_currency" Type="text" />
+          <Property Name="reply_to_number" Type="text" />
+          <Property Name="target_numbers" Type="text" />
+          <Property Name="target_statuses" Type="blob" />
+          <Property Name="body" Type="text" />
+          <Property Name="chatmsg_id" Type="integer" />
+          <Property Name="identity" Type="text" />
+          <Property Name="notification_id" Type="integer" />
+          <Property Name="event_flags" Type="integer" />
+          <Property Name="extprop_hide_from_history" Type="integer" />
+          <Property Name="extprop_extended" Type="integer" />
+        </EntityType>
+        <EntityType Name="Transfers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="type" Type="integer" />
+          <Property Name="partner_handle" Type="text" />
+          <Property Name="partner_dispname" Type="text" />
+          <Property Name="status" Type="integer" />
+          <Property Name="failurereason" Type="integer" />
+          <Property Name="starttime" Type="integer" />
+          <Property Name="finishtime" Type="integer" />
+          <Property Name="filepath" Type="text" />
+          <Property Name="filename" Type="text" />
+          <Property Name="filesize" Type="text" />
+          <Property Name="bytestransferred" Type="text" />
+          <Property Name="bytespersecond" Type="integer" />
+          <Property Name="chatmsg_guid" Type="blob" />
+          <Property Name="chatmsg_index" Type="integer" />
+          <Property Name="convo_id" Type="integer" />
+          <Property Name="pk_id" Type="integer" />
+          <Property Name="nodeid" Type="blob" />
+          <Property Name="last_activity" Type="integer" />
+          <Property Name="flags" Type="integer" />
+          <Property Name="old_status" Type="integer" />
+          <Property Name="old_filepath" Type="integer" />
+          <Property Name="accepttime" Type="integer" />
+          <Property Name="extprop_localfilename" Type="text" />
+          <Property Name="extprop_hide_from_history" Type="integer" />
+          <Property Name="extprop_window_visible" Type="integer" />
+          <Property Name="extprop_handled_by_chat" Type="integer" />
+        </EntityType>
+        <EntityType Name="Videos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="status" Type="integer" />
+          <Property Name="error" Type="text" />
+          <Property Name="debuginfo" Type="text" />
+          <Property Name="dimensions" Type="text" />
+          <Property Name="media_type" Type="integer" />
+          <Property Name="duration_1080" Type="integer" />
+          <Property Name="duration_720" Type="integer" />
+          <Property Name="duration_hqv" Type="integer" />
+          <Property Name="duration_vgad2" Type="integer" />
+          <Property Name="duration_ltvgad2" Type="integer" />
+          <Property Name="timestamp" Type="integer" />
+          <Property Name="hq_present" Type="integer" />
+          <Property Name="duration_ss" Type="integer" />
+          <Property Name="ss_timestamp" Type="integer" />
+          <Property Name="convo_id" Type="integer" />
+          <Property Name="device_path" Type="text" />
+        </EntityType>
+        <EntityType Name="Voicemails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="integer" />
+          <Property Name="type" Type="integer" />
+          <Property Name="partner_handle" Type="text" />
+          <Property Name="partner_dispname" Type="text" />
+          <Property Name="status" Type="integer" />
+          <Property Name="failurereason" Type="integer" />
+          <Property Name="subject" Type="text" />
+          <Property Name="timestamp" Type="integer" />
+          <Property Name="duration" Type="integer" />
+          <Property Name="allowed_duration" Type="integer" />
+          <Property Name="playback_progress" Type="integer" />
+          <Property Name="convo_id" Type="integer" />
+          <Property Name="chatmsg_guid" Type="blob" />
+          <Property Name="notification_id" Type="integer" />
+          <Property Name="flags" Type="integer" />
+          <Property Name="size" Type="integer" />
+          <Property Name="path" Type="text" />
+          <Property Name="failures" Type="integer" />
+          <Property Name="vflags" Type="integer" />
+          <Property Name="xmsg" Type="text" />
+          <Property Name="extprop_hide_from_history" Type="integer" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="DBModel.Account" />
+          <EntitySet Name="CallMembers" EntityType="DBModel.CallMember" />
+          <EntitySet Name="Calls" EntityType="DBModel.Call" />
+          <EntitySet Name="ChatMembers" EntityType="DBModel.ChatMember" />
+          <EntitySet Name="Chats" EntityType="DBModel.Chat" />
+          <EntitySet Name="ContactGroups" EntityType="DBModel.ContactGroup" />
+          <EntitySet Name="Contacts" EntityType="DBModel.Contact" />
+          <EntitySet Name="Conversations" EntityType="DBModel.ConversationEntity" />
+          <EntitySet Name="DbMetas" EntityType="DBModel.DbMeta" />
+          <EntitySet Name="LegacyMessages" EntityType="DBModel.LegacyMessage" />
+          <EntitySet Name="Messages" EntityType="DBModel.MessageEntity" />
+          <EntitySet Name="Participants" EntityType="DBModel.Participant" />
+          <EntitySet Name="SMSes" EntityType="DBModel.SMS" />
+          <EntitySet Name="Transfers" EntityType="DBModel.Transfer" />
+          <EntitySet Name="Videos" EntityType="DBModel.Video" />
+          <EntitySet Name="Voicemails" EntityType="DBModel.Voicemail" />
+          <AssociationSet Name="ConversationMessage" Association="DBModel.ConversationMessage">
+            <End Role="Conversation" EntitySet="Conversations" />
+            <End Role="Message" EntitySet="Messages" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="status" Type="Int64" />
+          <Property Name="suggested_skypename" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="skypename" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="fullname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="birthday" Type="Int64" />
+          <Property Name="gender" Type="Int64" />
+          <Property Name="languages" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="country" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="province" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="city" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="phone_home" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="phone_office" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="phone_mobile" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="emails" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="homepage" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="about" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="received_authrequest" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="displayname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="timezone" Type="Int64" />
+          <Property Name="ipcountry" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="given_displayname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CallMember">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="dispname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="languages" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="call_duration" Type="Int64" />
+          <Property Name="price_per_minute" Type="Int64" />
+          <Property Name="price_precision" Type="Int64" />
+          <Property Name="price_currency" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="payment_category" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="status" Type="Int64" />
+          <Property Name="failurereason" Type="Int64" />
+          <Property Name="sounderror_code" Type="Int64" />
+          <Property Name="soundlevel" Type="Int64" />
+          <Property Name="pstn_statustext" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="pstn_feedback" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="forward_targets" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="forwarded_by" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="debuginfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="videostatus" Type="Int64" />
+          <Property Name="target_identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="mike_status" Type="Int64" />
+          <Property Name="is_read_only" Type="Int64" />
+          <Property Name="quality_status" Type="Int64" />
+          <Property Name="call_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="transfer_status" Type="Int64" />
+          <Property Name="transfer_active" Type="Int64" />
+          <Property Name="transferred_by" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="transferred_to" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="guid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="next_redial_time" Type="Int64" />
+          <Property Name="nrof_redials_done" Type="Int64" />
+          <Property Name="nrof_redials_left" Type="Int64" />
+          <Property Name="transfer_topic" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="real_identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="start_timestamp" Type="Int64" />
+          <Property Name="is_conference" Type="Int64" />
+          <Property Name="quality_problems" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="identity_type" Type="Int64" />
+          <Property Name="country" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="creation_timestamp" Type="Int64" />
+          <Property Name="stats_xml" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="is_premium_video_sponsor" Type="Int64" />
+          <Property Name="is_multiparty_video_capable" Type="Int64" />
+          <Property Name="recovery_in_progress" Type="Int64" />
+          <Property Name="nonse_word" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="pk_status" Type="Int64" />
+          <Property Name="call_db_id" Type="Int64" />
+          <Property Name="prime_status" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Call">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="begin_timestamp" Type="Int64" />
+          <Property Name="topic" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="is_muted" Type="Int64" />
+          <Property Name="is_unseen_missed" Type="Int64" />
+          <Property Name="host_identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="mike_status" Type="Int64" />
+          <Property Name="duration" Type="Int64" />
+          <Property Name="soundlevel" Type="Int64" />
+          <Property Name="access_token" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="active_members" Type="Int64" />
+          <Property Name="is_active" Type="Int64" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="video_disabled" Type="Int64" />
+          <Property Name="joined_existing" Type="Int64" />
+          <Property Name="server_identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="vaa_input_status" Type="Int64" />
+          <Property Name="is_incoming" Type="Int64" />
+          <Property Name="is_conference" Type="Int64" />
+          <Property Name="is_on_hold" Type="Int64" />
+          <Property Name="start_timestamp" Type="Int64" />
+          <Property Name="quality_problems" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="current_video_audience" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="premium_video_status" Type="Int64" />
+          <Property Name="premium_video_is_grace_period" Type="Int64" />
+          <Property Name="is_premium_video_sponsor" Type="Int64" />
+          <Property Name="premium_video_sponsor_list" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="old_members" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="partner_handle" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="partner_dispname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="status" Type="Int64" />
+          <Property Name="failurereason" Type="Int64" />
+          <Property Name="failurecode" Type="Int64" />
+          <Property Name="pstn_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="old_duration" Type="Int64" />
+          <Property Name="conf_participants" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="pstn_status" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="members" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="conv_dbid" Type="Int64" />
+        </EntityType>
+        <EntityType Name="ChatMember">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="chatname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="role" Type="Int64" />
+          <Property Name="is_active" Type="Int64" />
+          <Property Name="cur_activities" Type="Int64" />
+          <Property Name="adder" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Chat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="options" Type="Int64" />
+          <Property Name="friendlyname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="timestamp" Type="Int64" />
+          <Property Name="activity_timestamp" Type="Int64" />
+          <Property Name="dialog_partner" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="adder" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="mystatus" Type="Int64" />
+          <Property Name="myrole" Type="Int64" />
+          <Property Name="posters" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="participants" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="applicants" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="banned_users" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="name_text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="topic" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="topic_xml" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="guidelines" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="alertstring" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="is_bookmarked" Type="Int64" />
+          <Property Name="passwordhint" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="unconsumed_suppressed_msg" Type="Int64" />
+          <Property Name="unconsumed_normal_msg" Type="Int64" />
+          <Property Name="unconsumed_elevated_msg" Type="Int64" />
+          <Property Name="unconsumed_msg_voice" Type="Int64" />
+          <Property Name="activemembers" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="state_data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="lifesigns" Type="Int64" />
+          <Property Name="last_change" Type="Int64" />
+          <Property Name="first_unread_message" Type="Int64" />
+          <Property Name="pk_type" Type="Int64" />
+          <Property Name="dbpath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="split_friendlyname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="conv_dbid" Type="Int64" />
+        </EntityType>
+        <EntityType Name="ContactGroup">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="custom_group_id" Type="Int64" />
+          <Property Name="given_displayname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="nrofcontacts" Type="Int64" />
+          <Property Name="nrofcontacts_online" Type="Int64" />
+          <Property Name="given_sortorder" Type="Int64" />
+          <Property Name="type_old" Type="Int64" />
+          <Property Name="proposer" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="associated_chat" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="members" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="cbl_id" Type="Int64" />
+          <Property Name="cbl_blob" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="fixed" Type="Int64" />
+          <Property Name="keep_sharedgroup_contacts" Type="Int64" />
+          <Property Name="chats" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="extprop_is_hidden" Type="Int64" />
+          <Property Name="extprop_sortorder_value" Type="Int64" />
+          <Property Name="extprop_is_expanded" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="skypename" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="fullname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="birthday" Type="Int64" />
+          <Property Name="gender" Type="Int64" />
+          <Property Name="languages" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="country" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="province" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="city" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ipcountry" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="displayname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="isblocked" Type="Int64" />
+        </EntityType>
+        <EntityType Name="ConversationEntity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="displayname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="local_livestatus" Type="Int64" />
+          <Property Name="inbox_timestamp" Type="Int64" />
+          <Property Name="inbox_message_id" Type="Int64" />
+          <Property Name="unconsumed_suppressed_messages" Type="Int64" />
+          <Property Name="unconsumed_normal_messages" Type="Int64" />
+          <Property Name="unconsumed_elevated_messages" Type="Int64" />
+          <Property Name="unconsumed_messages_voice" Type="Int64" />
+          <Property Name="active_vm_id" Type="Int64" />
+          <Property Name="context_horizon" Type="Int64" />
+          <Property Name="consumption_horizon" Type="Int64" />
+          <Property Name="last_activity_timestamp" Type="Int64" />
+          <Property Name="active_invoice_message" Type="Int64" />
+          <Property Name="spawned_from_convo_id" Type="Int64" />
+          <Property Name="pinned_order" Type="Int64" />
+          <Property Name="creator" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="creation_timestamp" Type="Int64" />
+          <Property Name="my_status" Type="Int64" />
+          <Property Name="passwordhint" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="meta_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="meta_topic" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="meta_guidelines" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="meta_picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="premium_video_status" Type="Int64" />
+          <Property Name="premium_video_is_grace_period" Type="Int64" />
+          <Property Name="guid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="dialog_partner" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="meta_description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="premium_video_sponsor_list" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="chat_dbid" Type="Int64" />
+          <NavigationProperty Name="Message" Relationship="DBModel.ConversationMessage" FromRole="Conversation" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="DbMeta">
+          <Key>
+            <PropertyRef Name="key" />
+          </Key>
+          <Property Name="key" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="value" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LegacyMessage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+        </EntityType>
+        <EntityType Name="MessageEntity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="convo_id" Type="Int64" Nullable="false" />
+          <Property Name="chatname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="author" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="from_dispname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="author_was_live" Type="Int64" />
+          <Property Name="guid" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="dialog_partner" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="timestamp" Type="Int64" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="sending_status" Type="Int64" />
+          <Property Name="consumption_status" Type="Int64" />
+          <Property Name="edited_by" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="edited_timestamp" Type="Int64" />
+          <Property Name="param_key" Type="Int64" />
+          <Property Name="param_value" Type="Int64" />
+          <Property Name="body_xml" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="identities" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="reason" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="leavereason" Type="Int64" />
+          <Property Name="participant_count" Type="Int64" />
+          <Property Name="error_code" Type="Int64" />
+          <Property Name="chatmsg_type" Type="Int64" />
+          <Property Name="chatmsg_status" Type="Int64" />
+          <Property Name="body_is_rawxml" Type="Int64" />
+          <Property Name="oldoptions" Type="Int64" />
+          <Property Name="newoptions" Type="Int64" />
+          <Property Name="newrole" Type="Int64" />
+          <Property Name="pk_id" Type="Int64" />
+          <Property Name="crc" Type="Int64" />
+          <Property Name="remote_id" Type="Int64" />
+          <Property Name="call_guid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="extprop_contact_review_date" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="extprop_contact_received_stamp" Type="Int64" />
+          <Property Name="extprop_contact_reviewed" Type="Int64" />
+          <NavigationProperty Name="Conversation" Relationship="DBModel.ConversationMessage" FromRole="Message" ToRole="Conversation" />
+        </EntityType>
+        <EntityType Name="Participant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="convo_id" Type="Int64" />
+          <Property Name="identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="rank" Type="Int64" />
+          <Property Name="requested_rank" Type="Int64" />
+          <Property Name="text_status" Type="Int64" />
+          <Property Name="voice_status" Type="Int64" />
+          <Property Name="video_status" Type="Int64" />
+          <Property Name="live_identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="live_price_for_me" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="live_fwd_identities" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="live_start_timestamp" Type="Int64" />
+          <Property Name="sound_level" Type="Int64" />
+          <Property Name="debuginfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="next_redial_time" Type="Int64" />
+          <Property Name="nrof_redials_left" Type="Int64" />
+          <Property Name="last_voice_error" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="quality_problems" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="live_type" Type="Int64" />
+          <Property Name="live_country" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="transferred_by" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="transferred_to" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="adder" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="last_leavereason" Type="Int64" />
+          <Property Name="is_premium_video_sponsor" Type="Int64" />
+          <Property Name="is_multiparty_video_capable" Type="Int64" />
+          <Property Name="live_identity_to_use" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="livesession_recovery_in_progress" Type="Int64" />
+          <Property Name="extprop_default_identity" Type="Int64" />
+        </EntityType>
+        <EntityType Name="SMS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="status" Type="Int64" />
+          <Property Name="failurereason" Type="Int64" />
+          <Property Name="is_failed_unseen" Type="Int64" />
+          <Property Name="timestamp" Type="Int64" />
+          <Property Name="price" Type="Int64" />
+          <Property Name="price_precision" Type="Int64" />
+          <Property Name="price_currency" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="reply_to_number" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="target_numbers" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="target_statuses" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="body" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="chatmsg_id" Type="Int64" />
+          <Property Name="identity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="notification_id" Type="Int64" />
+          <Property Name="event_flags" Type="Int64" />
+          <Property Name="extprop_hide_from_history" Type="Int64" />
+          <Property Name="extprop_extended" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Transfer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="partner_handle" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="partner_dispname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="status" Type="Int64" />
+          <Property Name="failurereason" Type="Int64" />
+          <Property Name="starttime" Type="Int64" />
+          <Property Name="finishtime" Type="Int64" />
+          <Property Name="filepath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="filename" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="filesize" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="bytestransferred" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="bytespersecond" Type="Int64" />
+          <Property Name="chatmsg_guid" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="chatmsg_index" Type="Int64" />
+          <Property Name="convo_id" Type="Int64" />
+          <Property Name="pk_id" Type="Int64" />
+          <Property Name="nodeid" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="last_activity" Type="Int64" />
+          <Property Name="flags" Type="Int64" />
+          <Property Name="old_status" Type="Int64" />
+          <Property Name="old_filepath" Type="Int64" />
+          <Property Name="accepttime" Type="Int64" />
+          <Property Name="extprop_localfilename" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="extprop_hide_from_history" Type="Int64" />
+          <Property Name="extprop_window_visible" Type="Int64" />
+          <Property Name="extprop_handled_by_chat" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Video">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="status" Type="Int64" />
+          <Property Name="error" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="debuginfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="dimensions" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="media_type" Type="Int64" />
+          <Property Name="duration_1080" Type="Int64" />
+          <Property Name="duration_720" Type="Int64" />
+          <Property Name="duration_hqv" Type="Int64" />
+          <Property Name="duration_vgad2" Type="Int64" />
+          <Property Name="duration_ltvgad2" Type="Int64" />
+          <Property Name="timestamp" Type="Int64" />
+          <Property Name="hq_present" Type="Int64" />
+          <Property Name="duration_ss" Type="Int64" />
+          <Property Name="ss_timestamp" Type="Int64" />
+          <Property Name="convo_id" Type="Int64" />
+          <Property Name="device_path" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Voicemail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="is_permanent" Type="Int64" />
+          <Property Name="type" Type="Int64" />
+          <Property Name="partner_handle" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="partner_dispname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="status" Type="Int64" />
+          <Property Name="failurereason" Type="Int64" />
+          <Property Name="subject" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="timestamp" Type="Int64" />
+          <Property Name="duration" Type="Int64" />
+          <Property Name="allowed_duration" Type="Int64" />
+          <Property Name="playback_progress" Type="Int64" />
+          <Property Name="convo_id" Type="Int64" />
+          <Property Name="chatmsg_guid" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="notification_id" Type="Int64" />
+          <Property Name="flags" Type="Int64" />
+          <Property Name="size" Type="Int64" />
+          <Property Name="path" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="failures" Type="Int64" />
+          <Property Name="vflags" Type="Int64" />
+          <Property Name="xmsg" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="extprop_hide_from_history" Type="Int64" />
+        </EntityType>
+        <Association Name="ConversationMessage">
+          <End Type="DBModel.ConversationEntity" Role="Conversation" Multiplicity="1" />
+          <End Type="DBModel.MessageEntity" Role="Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversation">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="convo_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="DBModel.Account">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="suggested_skypename" ColumnName="suggested_skypename" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="skypename" ColumnName="skypename" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="languages" ColumnName="languages" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="province" ColumnName="province" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="phone_home" ColumnName="phone_home" />
+                <ScalarProperty Name="phone_office" ColumnName="phone_office" />
+                <ScalarProperty Name="phone_mobile" ColumnName="phone_mobile" />
+                <ScalarProperty Name="emails" ColumnName="emails" />
+                <ScalarProperty Name="homepage" ColumnName="homepage" />
+                <ScalarProperty Name="about" ColumnName="about" />
+                <ScalarProperty Name="received_authrequest" ColumnName="received_authrequest" />
+                <ScalarProperty Name="displayname" ColumnName="displayname" />
+                <ScalarProperty Name="timezone" ColumnName="timezone" />
+                <ScalarProperty Name="ipcountry" ColumnName="ipcountry" />
+                <ScalarProperty Name="given_displayname" ColumnName="given_displayname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CallMembers">
+            <EntityTypeMapping TypeName="DBModel.CallMember">
+              <MappingFragment StoreEntitySet="CallMembers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="identity" ColumnName="identity" />
+                <ScalarProperty Name="dispname" ColumnName="dispname" />
+                <ScalarProperty Name="languages" ColumnName="languages" />
+                <ScalarProperty Name="call_duration" ColumnName="call_duration" />
+                <ScalarProperty Name="price_per_minute" ColumnName="price_per_minute" />
+                <ScalarProperty Name="price_precision" ColumnName="price_precision" />
+                <ScalarProperty Name="price_currency" ColumnName="price_currency" />
+                <ScalarProperty Name="payment_category" ColumnName="payment_category" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="failurereason" ColumnName="failurereason" />
+                <ScalarProperty Name="sounderror_code" ColumnName="sounderror_code" />
+                <ScalarProperty Name="soundlevel" ColumnName="soundlevel" />
+                <ScalarProperty Name="pstn_statustext" ColumnName="pstn_statustext" />
+                <ScalarProperty Name="pstn_feedback" ColumnName="pstn_feedback" />
+                <ScalarProperty Name="forward_targets" ColumnName="forward_targets" />
+                <ScalarProperty Name="forwarded_by" ColumnName="forwarded_by" />
+                <ScalarProperty Name="debuginfo" ColumnName="debuginfo" />
+                <ScalarProperty Name="videostatus" ColumnName="videostatus" />
+                <ScalarProperty Name="target_identity" ColumnName="target_identity" />
+                <ScalarProperty Name="mike_status" ColumnName="mike_status" />
+                <ScalarProperty Name="is_read_only" ColumnName="is_read_only" />
+                <ScalarProperty Name="quality_status" ColumnName="quality_status" />
+                <ScalarProperty Name="call_name" ColumnName="call_name" />
+                <ScalarProperty Name="transfer_status" ColumnName="transfer_status" />
+                <ScalarProperty Name="transfer_active" ColumnName="transfer_active" />
+                <ScalarProperty Name="transferred_by" ColumnName="transferred_by" />
+                <ScalarProperty Name="transferred_to" ColumnName="transferred_to" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="next_redial_time" ColumnName="next_redial_time" />
+                <ScalarProperty Name="nrof_redials_done" ColumnName="nrof_redials_done" />
+                <ScalarProperty Name="nrof_redials_left" ColumnName="nrof_redials_left" />
+                <ScalarProperty Name="transfer_topic" ColumnName="transfer_topic" />
+                <ScalarProperty Name="real_identity" ColumnName="real_identity" />
+                <ScalarProperty Name="start_timestamp" ColumnName="start_timestamp" />
+                <ScalarProperty Name="is_conference" ColumnName="is_conference" />
+                <ScalarProperty Name="quality_problems" ColumnName="quality_problems" />
+                <ScalarProperty Name="identity_type" ColumnName="identity_type" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="creation_timestamp" ColumnName="creation_timestamp" />
+                <ScalarProperty Name="stats_xml" ColumnName="stats_xml" />
+                <ScalarProperty Name="is_premium_video_sponsor" ColumnName="is_premium_video_sponsor" />
+                <ScalarProperty Name="is_multiparty_video_capable" ColumnName="is_multiparty_video_capable" />
+                <ScalarProperty Name="recovery_in_progress" ColumnName="recovery_in_progress" />
+                <ScalarProperty Name="nonse_word" ColumnName="nonse_word" />
+                <ScalarProperty Name="pk_status" ColumnName="pk_status" />
+                <ScalarProperty Name="call_db_id" ColumnName="call_db_id" />
+                <ScalarProperty Name="prime_status" ColumnName="prime_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Calls">
+            <EntityTypeMapping TypeName="DBModel.Call">
+              <MappingFragment StoreEntitySet="Calls">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="begin_timestamp" ColumnName="begin_timestamp" />
+                <ScalarProperty Name="topic" ColumnName="topic" />
+                <ScalarProperty Name="is_muted" ColumnName="is_muted" />
+                <ScalarProperty Name="is_unseen_missed" ColumnName="is_unseen_missed" />
+                <ScalarProperty Name="host_identity" ColumnName="host_identity" />
+                <ScalarProperty Name="mike_status" ColumnName="mike_status" />
+                <ScalarProperty Name="duration" ColumnName="duration" />
+                <ScalarProperty Name="soundlevel" ColumnName="soundlevel" />
+                <ScalarProperty Name="access_token" ColumnName="access_token" />
+                <ScalarProperty Name="active_members" ColumnName="active_members" />
+                <ScalarProperty Name="is_active" ColumnName="is_active" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="video_disabled" ColumnName="video_disabled" />
+                <ScalarProperty Name="joined_existing" ColumnName="joined_existing" />
+                <ScalarProperty Name="server_identity" ColumnName="server_identity" />
+                <ScalarProperty Name="vaa_input_status" ColumnName="vaa_input_status" />
+                <ScalarProperty Name="is_incoming" ColumnName="is_incoming" />
+                <ScalarProperty Name="is_conference" ColumnName="is_conference" />
+                <ScalarProperty Name="is_on_hold" ColumnName="is_on_hold" />
+                <ScalarProperty Name="start_timestamp" ColumnName="start_timestamp" />
+                <ScalarProperty Name="quality_problems" ColumnName="quality_problems" />
+                <ScalarProperty Name="current_video_audience" ColumnName="current_video_audience" />
+                <ScalarProperty Name="premium_video_status" ColumnName="premium_video_status" />
+                <ScalarProperty Name="premium_video_is_grace_period" ColumnName="premium_video_is_grace_period" />
+                <ScalarProperty Name="is_premium_video_sponsor" ColumnName="is_premium_video_sponsor" />
+                <ScalarProperty Name="premium_video_sponsor_list" ColumnName="premium_video_sponsor_list" />
+                <ScalarProperty Name="old_members" ColumnName="old_members" />
+                <ScalarProperty Name="partner_handle" ColumnName="partner_handle" />
+                <ScalarProperty Name="partner_dispname" ColumnName="partner_dispname" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="failurereason" ColumnName="failurereason" />
+                <ScalarProperty Name="failurecode" ColumnName="failurecode" />
+                <ScalarProperty Name="pstn_number" ColumnName="pstn_number" />
+                <ScalarProperty Name="old_duration" ColumnName="old_duration" />
+                <ScalarProperty Name="conf_participants" ColumnName="conf_participants" />
+                <ScalarProperty Name="pstn_status" ColumnName="pstn_status" />
+                <ScalarProperty Name="members" ColumnName="members" />
+                <ScalarProperty Name="conv_dbid" ColumnName="conv_dbid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChatMembers">
+            <EntityTypeMapping TypeName="DBModel.ChatMember">
+              <MappingFragment StoreEntitySet="ChatMembers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="chatname" ColumnName="chatname" />
+                <ScalarProperty Name="identity" ColumnName="identity" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="is_active" ColumnName="is_active" />
+                <ScalarProperty Name="cur_activities" ColumnName="cur_activities" />
+                <ScalarProperty Name="adder" ColumnName="adder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chats">
+            <EntityTypeMapping TypeName="DBModel.Chat">
+              <MappingFragment StoreEntitySet="Chats">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="options" ColumnName="options" />
+                <ScalarProperty Name="friendlyname" ColumnName="friendlyname" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="activity_timestamp" ColumnName="activity_timestamp" />
+                <ScalarProperty Name="dialog_partner" ColumnName="dialog_partner" />
+                <ScalarProperty Name="adder" ColumnName="adder" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="mystatus" ColumnName="mystatus" />
+                <ScalarProperty Name="myrole" ColumnName="myrole" />
+                <ScalarProperty Name="posters" ColumnName="posters" />
+                <ScalarProperty Name="participants" ColumnName="participants" />
+                <ScalarProperty Name="applicants" ColumnName="applicants" />
+                <ScalarProperty Name="banned_users" ColumnName="banned_users" />
+                <ScalarProperty Name="name_text" ColumnName="name_text" />
+                <ScalarProperty Name="topic" ColumnName="topic" />
+                <ScalarProperty Name="topic_xml" ColumnName="topic_xml" />
+                <ScalarProperty Name="guidelines" ColumnName="guidelines" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="alertstring" ColumnName="alertstring" />
+                <ScalarProperty Name="is_bookmarked" ColumnName="is_bookmarked" />
+                <ScalarProperty Name="passwordhint" ColumnName="passwordhint" />
+                <ScalarProperty Name="unconsumed_suppressed_msg" ColumnName="unconsumed_suppressed_msg" />
+                <ScalarProperty Name="unconsumed_normal_msg" ColumnName="unconsumed_normal_msg" />
+                <ScalarProperty Name="unconsumed_elevated_msg" ColumnName="unconsumed_elevated_msg" />
+                <ScalarProperty Name="unconsumed_msg_voice" ColumnName="unconsumed_msg_voice" />
+                <ScalarProperty Name="activemembers" ColumnName="activemembers" />
+                <ScalarProperty Name="state_data" ColumnName="state_data" />
+                <ScalarProperty Name="lifesigns" ColumnName="lifesigns" />
+                <ScalarProperty Name="last_change" ColumnName="last_change" />
+                <ScalarProperty Name="first_unread_message" ColumnName="first_unread_message" />
+                <ScalarProperty Name="pk_type" ColumnName="pk_type" />
+                <ScalarProperty Name="dbpath" ColumnName="dbpath" />
+                <ScalarProperty Name="split_friendlyname" ColumnName="split_friendlyname" />
+                <ScalarProperty Name="conv_dbid" ColumnName="conv_dbid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactGroups">
+            <EntityTypeMapping TypeName="DBModel.ContactGroup">
+              <MappingFragment StoreEntitySet="ContactGroups">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="custom_group_id" ColumnName="custom_group_id" />
+                <ScalarProperty Name="given_displayname" ColumnName="given_displayname" />
+                <ScalarProperty Name="nrofcontacts" ColumnName="nrofcontacts" />
+                <ScalarProperty Name="nrofcontacts_online" ColumnName="nrofcontacts_online" />
+                <ScalarProperty Name="given_sortorder" ColumnName="given_sortorder" />
+                <ScalarProperty Name="type_old" ColumnName="type_old" />
+                <ScalarProperty Name="proposer" ColumnName="proposer" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="associated_chat" ColumnName="associated_chat" />
+                <ScalarProperty Name="members" ColumnName="members" />
+                <ScalarProperty Name="cbl_id" ColumnName="cbl_id" />
+                <ScalarProperty Name="cbl_blob" ColumnName="cbl_blob" />
+                <ScalarProperty Name="fixed" ColumnName="fixed" />
+                <ScalarProperty Name="keep_sharedgroup_contacts" ColumnName="keep_sharedgroup_contacts" />
+                <ScalarProperty Name="chats" ColumnName="chats" />
+                <ScalarProperty Name="extprop_is_hidden" ColumnName="extprop_is_hidden" />
+                <ScalarProperty Name="extprop_sortorder_value" ColumnName="extprop_sortorder_value" />
+                <ScalarProperty Name="extprop_is_expanded" ColumnName="extprop_is_expanded" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="DBModel.Contact">
+              <MappingFragment StoreEntitySet="Contacts">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="skypename" ColumnName="skypename" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="languages" ColumnName="languages" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="province" ColumnName="province" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="ipcountry" ColumnName="ipcountry" />
+                <ScalarProperty Name="displayname" ColumnName="displayname" />
+                <ScalarProperty Name="isblocked" ColumnName="isblocked" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Conversations">
+            <EntityTypeMapping TypeName="DBModel.ConversationEntity">
+              <MappingFragment StoreEntitySet="Conversations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="identity" ColumnName="identity" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="displayname" ColumnName="displayname" />
+                <ScalarProperty Name="local_livestatus" ColumnName="local_livestatus" />
+                <ScalarProperty Name="inbox_timestamp" ColumnName="inbox_timestamp" />
+                <ScalarProperty Name="inbox_message_id" ColumnName="inbox_message_id" />
+                <ScalarProperty Name="unconsumed_suppressed_messages" ColumnName="unconsumed_suppressed_messages" />
+                <ScalarProperty Name="unconsumed_normal_messages" ColumnName="unconsumed_normal_messages" />
+                <ScalarProperty Name="unconsumed_elevated_messages" ColumnName="unconsumed_elevated_messages" />
+                <ScalarProperty Name="unconsumed_messages_voice" ColumnName="unconsumed_messages_voice" />
+                <ScalarProperty Name="active_vm_id" ColumnName="active_vm_id" />
+                <ScalarProperty Name="context_horizon" ColumnName="context_horizon" />
+                <ScalarProperty Name="consumption_horizon" ColumnName="consumption_horizon" />
+                <ScalarProperty Name="last_activity_timestamp" ColumnName="last_activity_timestamp" />
+                <ScalarProperty Name="active_invoice_message" ColumnName="active_invoice_message" />
+                <ScalarProperty Name="spawned_from_convo_id" ColumnName="spawned_from_convo_id" />
+                <ScalarProperty Name="pinned_order" ColumnName="pinned_order" />
+                <ScalarProperty Name="creator" ColumnName="creator" />
+                <ScalarProperty Name="creation_timestamp" ColumnName="creation_timestamp" />
+                <ScalarProperty Name="my_status" ColumnName="my_status" />
+                <ScalarProperty Name="passwordhint" ColumnName="passwordhint" />
+                <ScalarProperty Name="meta_name" ColumnName="meta_name" />
+                <ScalarProperty Name="meta_topic" ColumnName="meta_topic" />
+                <ScalarProperty Name="meta_guidelines" ColumnName="meta_guidelines" />
+                <ScalarProperty Name="meta_picture" ColumnName="meta_picture" />
+                <ScalarProperty Name="premium_video_status" ColumnName="premium_video_status" />
+                <ScalarProperty Name="premium_video_is_grace_period" ColumnName="premium_video_is_grace_period" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="dialog_partner" ColumnName="dialog_partner" />
+                <ScalarProperty Name="meta_description" ColumnName="meta_description" />
+                <ScalarProperty Name="premium_video_sponsor_list" ColumnName="premium_video_sponsor_list" />
+                <ScalarProperty Name="chat_dbid" ColumnName="chat_dbid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DbMetas">
+            <EntityTypeMapping TypeName="DBModel.DbMeta">
+              <MappingFragment StoreEntitySet="DbMeta">
+                <ScalarProperty Name="key" ColumnName="key" />
+                <ScalarProperty Name="value" ColumnName="value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LegacyMessages">
+            <EntityTypeMapping TypeName="DBModel.LegacyMessage">
+              <MappingFragment StoreEntitySet="LegacyMessages">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Messages">
+            <EntityTypeMapping TypeName="DBModel.MessageEntity">
+              <MappingFragment StoreEntitySet="Messages">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="convo_id" ColumnName="convo_id" />
+                <ScalarProperty Name="chatname" ColumnName="chatname" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="from_dispname" ColumnName="from_dispname" />
+                <ScalarProperty Name="author_was_live" ColumnName="author_was_live" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="dialog_partner" ColumnName="dialog_partner" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="sending_status" ColumnName="sending_status" />
+                <ScalarProperty Name="consumption_status" ColumnName="consumption_status" />
+                <ScalarProperty Name="edited_by" ColumnName="edited_by" />
+                <ScalarProperty Name="edited_timestamp" ColumnName="edited_timestamp" />
+                <ScalarProperty Name="param_key" ColumnName="param_key" />
+                <ScalarProperty Name="param_value" ColumnName="param_value" />
+                <ScalarProperty Name="body_xml" ColumnName="body_xml" />
+                <ScalarProperty Name="identities" ColumnName="identities" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="leavereason" ColumnName="leavereason" />
+                <ScalarProperty Name="participant_count" ColumnName="participant_count" />
+                <ScalarProperty Name="error_code" ColumnName="error_code" />
+                <ScalarProperty Name="chatmsg_type" ColumnName="chatmsg_type" />
+                <ScalarProperty Name="chatmsg_status" ColumnName="chatmsg_status" />
+                <ScalarProperty Name="body_is_rawxml" ColumnName="body_is_rawxml" />
+                <ScalarProperty Name="oldoptions" ColumnName="oldoptions" />
+                <ScalarProperty Name="newoptions" ColumnName="newoptions" />
+                <ScalarProperty Name="newrole" ColumnName="newrole" />
+                <ScalarProperty Name="pk_id" ColumnName="pk_id" />
+                <ScalarProperty Name="crc" ColumnName="crc" />
+                <ScalarProperty Name="remote_id" ColumnName="remote_id" />
+                <ScalarProperty Name="call_guid" ColumnName="call_guid" />
+                <ScalarProperty Name="extprop_contact_review_date" ColumnName="extprop_contact_review_date" />
+                <ScalarProperty Name="extprop_contact_received_stamp" ColumnName="extprop_contact_received_stamp" />
+                <ScalarProperty Name="extprop_contact_reviewed" ColumnName="extprop_contact_reviewed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Participants">
+            <EntityTypeMapping TypeName="DBModel.Participant">
+              <MappingFragment StoreEntitySet="Participants">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="convo_id" ColumnName="convo_id" />
+                <ScalarProperty Name="identity" ColumnName="identity" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="requested_rank" ColumnName="requested_rank" />
+                <ScalarProperty Name="text_status" ColumnName="text_status" />
+                <ScalarProperty Name="voice_status" ColumnName="voice_status" />
+                <ScalarProperty Name="video_status" ColumnName="video_status" />
+                <ScalarProperty Name="live_identity" ColumnName="live_identity" />
+                <ScalarProperty Name="live_price_for_me" ColumnName="live_price_for_me" />
+                <ScalarProperty Name="live_fwd_identities" ColumnName="live_fwd_identities" />
+                <ScalarProperty Name="live_start_timestamp" ColumnName="live_start_timestamp" />
+                <ScalarProperty Name="sound_level" ColumnName="sound_level" />
+                <ScalarProperty Name="debuginfo" ColumnName="debuginfo" />
+                <ScalarProperty Name="next_redial_time" ColumnName="next_redial_time" />
+                <ScalarProperty Name="nrof_redials_left" ColumnName="nrof_redials_left" />
+                <ScalarProperty Name="last_voice_error" ColumnName="last_voice_error" />
+                <ScalarProperty Name="quality_problems" ColumnName="quality_problems" />
+                <ScalarProperty Name="live_type" ColumnName="live_type" />
+                <ScalarProperty Name="live_country" ColumnName="live_country" />
+                <ScalarProperty Name="transferred_by" ColumnName="transferred_by" />
+                <ScalarProperty Name="transferred_to" ColumnName="transferred_to" />
+                <ScalarProperty Name="adder" ColumnName="adder" />
+                <ScalarProperty Name="last_leavereason" ColumnName="last_leavereason" />
+                <ScalarProperty Name="is_premium_video_sponsor" ColumnName="is_premium_video_sponsor" />
+                <ScalarProperty Name="is_multiparty_video_capable" ColumnName="is_multiparty_video_capable" />
+                <ScalarProperty Name="live_identity_to_use" ColumnName="live_identity_to_use" />
+                <ScalarProperty Name="livesession_recovery_in_progress" ColumnName="livesession_recovery_in_progress" />
+                <ScalarProperty Name="extprop_default_identity" ColumnName="extprop_default_identity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SMSes">
+            <EntityTypeMapping TypeName="DBModel.SMS">
+              <MappingFragment StoreEntitySet="SMSes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="failurereason" ColumnName="failurereason" />
+                <ScalarProperty Name="is_failed_unseen" ColumnName="is_failed_unseen" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="price_precision" ColumnName="price_precision" />
+                <ScalarProperty Name="price_currency" ColumnName="price_currency" />
+                <ScalarProperty Name="reply_to_number" ColumnName="reply_to_number" />
+                <ScalarProperty Name="target_numbers" ColumnName="target_numbers" />
+                <ScalarProperty Name="target_statuses" ColumnName="target_statuses" />
+                <ScalarProperty Name="body" ColumnName="body" />
+                <ScalarProperty Name="chatmsg_id" ColumnName="chatmsg_id" />
+                <ScalarProperty Name="identity" ColumnName="identity" />
+                <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+                <ScalarProperty Name="event_flags" ColumnName="event_flags" />
+                <ScalarProperty Name="extprop_hide_from_history" ColumnName="extprop_hide_from_history" />
+                <ScalarProperty Name="extprop_extended" ColumnName="extprop_extended" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transfers">
+            <EntityTypeMapping TypeName="DBModel.Transfer">
+              <MappingFragment StoreEntitySet="Transfers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="partner_handle" ColumnName="partner_handle" />
+                <ScalarProperty Name="partner_dispname" ColumnName="partner_dispname" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="failurereason" ColumnName="failurereason" />
+                <ScalarProperty Name="starttime" ColumnName="starttime" />
+                <ScalarProperty Name="finishtime" ColumnName="finishtime" />
+                <ScalarProperty Name="filepath" ColumnName="filepath" />
+                <ScalarProperty Name="filename" ColumnName="filename" />
+                <ScalarProperty Name="filesize" ColumnName="filesize" />
+                <ScalarProperty Name="bytestransferred" ColumnName="bytestransferred" />
+                <ScalarProperty Name="bytespersecond" ColumnName="bytespersecond" />
+                <ScalarProperty Name="chatmsg_guid" ColumnName="chatmsg_guid" />
+                <ScalarProperty Name="chatmsg_index" ColumnName="chatmsg_index" />
+                <ScalarProperty Name="convo_id" ColumnName="convo_id" />
+                <ScalarProperty Name="pk_id" ColumnName="pk_id" />
+                <ScalarProperty Name="nodeid" ColumnName="nodeid" />
+                <ScalarProperty Name="last_activity" ColumnName="last_activity" />
+                <ScalarProperty Name="flags" ColumnName="flags" />
+                <ScalarProperty Name="old_status" ColumnName="old_status" />
+                <ScalarProperty Name="old_filepath" ColumnName="old_filepath" />
+                <ScalarProperty Name="accepttime" ColumnName="accepttime" />
+                <ScalarProperty Name="extprop_localfilename" ColumnName="extprop_localfilename" />
+                <ScalarProperty Name="extprop_hide_from_history" ColumnName="extprop_hide_from_history" />
+                <ScalarProperty Name="extprop_window_visible" ColumnName="extprop_window_visible" />
+                <ScalarProperty Name="extprop_handled_by_chat" ColumnName="extprop_handled_by_chat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Videos">
+            <EntityTypeMapping TypeName="DBModel.Video">
+              <MappingFragment StoreEntitySet="Videos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="error" ColumnName="error" />
+                <ScalarProperty Name="debuginfo" ColumnName="debuginfo" />
+                <ScalarProperty Name="dimensions" ColumnName="dimensions" />
+                <ScalarProperty Name="media_type" ColumnName="media_type" />
+                <ScalarProperty Name="duration_1080" ColumnName="duration_1080" />
+                <ScalarProperty Name="duration_720" ColumnName="duration_720" />
+                <ScalarProperty Name="duration_hqv" ColumnName="duration_hqv" />
+                <ScalarProperty Name="duration_vgad2" ColumnName="duration_vgad2" />
+                <ScalarProperty Name="duration_ltvgad2" ColumnName="duration_ltvgad2" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="hq_present" ColumnName="hq_present" />
+                <ScalarProperty Name="duration_ss" ColumnName="duration_ss" />
+                <ScalarProperty Name="ss_timestamp" ColumnName="ss_timestamp" />
+                <ScalarProperty Name="convo_id" ColumnName="convo_id" />
+                <ScalarProperty Name="device_path" ColumnName="device_path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Voicemails">
+            <EntityTypeMapping TypeName="DBModel.Voicemail">
+              <MappingFragment StoreEntitySet="Voicemails">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="is_permanent" ColumnName="is_permanent" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="partner_handle" ColumnName="partner_handle" />
+                <ScalarProperty Name="partner_dispname" ColumnName="partner_dispname" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="failurereason" ColumnName="failurereason" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="duration" ColumnName="duration" />
+                <ScalarProperty Name="allowed_duration" ColumnName="allowed_duration" />
+                <ScalarProperty Name="playback_progress" ColumnName="playback_progress" />
+                <ScalarProperty Name="convo_id" ColumnName="convo_id" />
+                <ScalarProperty Name="chatmsg_guid" ColumnName="chatmsg_guid" />
+                <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+                <ScalarProperty Name="flags" ColumnName="flags" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="failures" ColumnName="failures" />
+                <ScalarProperty Name="vflags" ColumnName="vflags" />
+                <ScalarProperty Name="xmsg" ColumnName="xmsg" />
+                <ScalarProperty Name="extprop_hide_from_history" ColumnName="extprop_hide_from_history" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
