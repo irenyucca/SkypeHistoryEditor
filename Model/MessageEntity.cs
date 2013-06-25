@@ -50,6 +50,7 @@ namespace Model
         public string extprop_contact_review_date { get; set; }
         public Nullable<long> extprop_contact_received_stamp { get; set; }
         public Nullable<long> extprop_contact_reviewed { get; set; }
+        public DateTime dateTime { get { return Convert.ToDateTime(TimeSpan.FromTicks(timestamp.Value).ToString()); } }
     
         public virtual ConversationEntity Conversation { get; set; }
     }
